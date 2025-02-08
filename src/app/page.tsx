@@ -1,5 +1,11 @@
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/Button/button";
 
 export default function Home() {
-  return <Button>Hello, world!</Button>;
+  return (
+    <div>
+      <ThemeSwitcher />
+      <Button>Hello, world!</Button>
+    </div>
+  );
 }
