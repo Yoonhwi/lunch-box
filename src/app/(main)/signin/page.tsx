@@ -34,7 +34,7 @@ export default function SigninForm() {
     signinAction,
     initState()
   );
-  console.log(state);
+
   useActionToast(state);
 
   const form = useForm<z.infer<typeof signinSchema>>({
@@ -44,8 +44,6 @@ export default function SigninForm() {
       password: "",
     },
   });
-
-  console.log(form.watch("email"));
 
   return (
     <Card className="w-[320px] md:w-[400px]">
@@ -104,7 +102,9 @@ export default function SigninForm() {
         </Form>
       </CardContent>
       <CardFooter className="justify-center">
-        <p className="text-xs text-muted-foreground">Welcome to the hestia.</p>
+        <p className="text-xs text-muted-foreground">
+          Welcome to the LunchBox.
+        </p>
       </CardFooter>
     </Card>
   );

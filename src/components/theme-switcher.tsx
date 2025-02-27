@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { capitalize } from "lodash-es";
 import { useTheme } from "next-themes";
 
-import { Button } from "./ui/Button/button";
+import { Button } from "./ui/button/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,7 +29,11 @@ const ThemeSwitcher = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {themeOptions.map((theme) => (
-          <DropdownMenuItem key={theme} onClick={() => setTheme(theme)}>
+          <DropdownMenuItem
+            key={theme}
+            onClick={() => setTheme(theme)}
+            className="cursor-pointer"
+          >
             {capitalize(theme)}
           </DropdownMenuItem>
         ))}
