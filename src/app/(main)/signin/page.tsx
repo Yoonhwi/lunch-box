@@ -46,66 +46,70 @@ export default function SigninForm() {
   });
 
   return (
-    <Card className="w-[320px] md:w-[400px]">
-      <CardHeader>
-        <CardTitle>{"Signin"}</CardTitle>
-        <CardDescription>{"Signin Description"}</CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-col gap-4">
-        <Form {...form}>
-          <form
-            action={dispatch}
-            onSubmit={handleSubmit(form, dispatch)}
-            className="flex flex-col gap-4"
-          >
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{"Email"}</FormLabel>
-                  <FormControl>
-                    <Input
-                      required
-                      autoComplete="email"
-                      placeholder={"Email"}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="password"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{"Password"}</FormLabel>
-                  <FormControl>
-                    <Input
-                      required
-                      type="password"
-                      autoComplete="current-password"
-                      placeholder={"Password"}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" disabled={isPending}>
-              {"Signin"}
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-      <CardFooter className="justify-center">
-        <p className="text-xs text-muted-foreground">
-          Welcome to the LunchBox.
-        </p>
-      </CardFooter>
-    </Card>
+    <div id="location-form" className="flex justify-center pt-24">
+      <div className="w-content flex flex-col">
+        <Card className="w-[320px] md:w-[400px]">
+          <CardHeader>
+            <CardTitle>{"Signin"}</CardTitle>
+            <CardDescription>{"Signin Description"}</CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-4">
+            <Form {...form}>
+              <form
+                action={dispatch}
+                onSubmit={handleSubmit(form, dispatch)}
+                className="flex flex-col gap-4"
+              >
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{"Email"}</FormLabel>
+                      <FormControl>
+                        <Input
+                          required
+                          autoComplete="email"
+                          placeholder={"Email"}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="password"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{"Password"}</FormLabel>
+                      <FormControl>
+                        <Input
+                          required
+                          type="password"
+                          autoComplete="current-password"
+                          placeholder={"Password"}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" disabled={isPending}>
+                  {"Signin"}
+                </Button>
+              </form>
+            </Form>
+          </CardContent>
+          <CardFooter className="justify-center">
+            <p className="text-xs text-muted-foreground">
+              Welcome to the LunchBox.
+            </p>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
   );
 }
