@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
 
 import Header from "./header";
+import PageTransitionEffect from "./page-transition-effect";
 
 import type { Metadata } from "next";
 
@@ -41,7 +42,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <PageTransitionEffect>{children}</PageTransitionEffect>
           <Toaster />
         </ThemeProvider>
       </body>
