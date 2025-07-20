@@ -11,13 +11,14 @@ export default function Navigations() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-10">
+    <nav className="flex-1 flex items-center gap-10 justify-between">
       <Link
         href={toUrl(Pages.Home)}
         className="text-xl font-bold text-muted-foreground transition-colors hover:text-primary"
       >
         LUNCH BOX
       </Link>
+
       <ul className="flex gap-6">
         {navItems.map((item) => {
           return (
