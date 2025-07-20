@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { capitalize } from "lodash-es";
 import { useTheme } from "next-themes";
 
-import { Button } from "./ui/Button/button";
+import { Button } from "./ui/button/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
